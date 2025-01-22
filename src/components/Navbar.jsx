@@ -8,10 +8,11 @@ import Button from 'react-bootstrap/Button';
 
 import logo from '../assets/icon.svg'
 
+
 const Navigation = () => {
   return (
     <>
-      <Navbar className="bg-white">
+      <Navbar expand="md" className="bg-white">
         <Container>
         <Navbar.Brand href="#home">
             <img
@@ -22,12 +23,15 @@ const Navigation = () => {
             />
             The Bit Store
           </Navbar.Brand>
-          <Nav className="justify-content-center">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/shop">Shop</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
-          </Nav>
-          <Button href='/login'>Log in</Button>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mx-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/shop">Shop</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
+            </Nav>
+            <Button href="/login" className="ms-lg-2 mt-2 mt-lg-0">Log in</Button>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>

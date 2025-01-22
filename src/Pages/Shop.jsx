@@ -1,9 +1,13 @@
 import React from 'react'
+import ProductsList from '../components/ProductsList'
+
 
 const Shop = () => {
   return (
     <div>
-      <h1 className=''>Shop</h1>
+      <ProductsList />
+      <ProductsList />
+      <ProductsList />
     </div>
   )
 }

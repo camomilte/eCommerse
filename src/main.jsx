@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
-import './index.css'
+import './styling/index.css'
 
 import RootLayout from './layouts/RootLayout'
 
