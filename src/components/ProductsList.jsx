@@ -6,8 +6,6 @@ const ProductsList = () => {
     <div className='products-list container mt-4'>
         <div className='row'>
                 <ProductCard />
-                <ProductCard />
-                <ProductCard />
         </div>
     </div>
   )

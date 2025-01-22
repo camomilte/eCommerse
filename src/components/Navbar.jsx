@@ -26,9 +26,9 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/shop">Shop</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link href="/">Startsida</Nav.Link>
+              <Nav.Link href="/shop">Butik</Nav.Link>
+              <Nav.Link href="/contact">Kontakta oss</Nav.Link>
             </Nav>
             <Button href="/login" className="ms-lg-2 mt-2 mt-lg-0">Log in</Button>
           </Navbar.Collapse>

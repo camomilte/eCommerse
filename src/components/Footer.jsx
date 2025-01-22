@@ -9,7 +9,7 @@ import logo from '../assets/icon.svg'
 const Footer = () => {
   return (
     <>
-    <Navbar className="bg-dark p-4" fixed="bottom">
+    <Navbar className="bg-dark p-4">
       <Container>
         <Navbar.Brand href="#home" className='text-light'>
           <img
