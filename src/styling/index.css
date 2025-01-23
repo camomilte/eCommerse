@@ -1,0 +1,29 @@
+:root {
+    --clr-secondary: #666666;
+    --clr-text: #fff;
+}
+
+.footer_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+
+.footer_profile a {
+	background: var(--clr-secondary);
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	border-radius: 50%;
+	line-height: 40px;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: var(--clr-text);
+}
+
+.footer_profile a:hover {
+    filter: brightness(130%);
+    transition: ease-in 200ms;
+}
+
