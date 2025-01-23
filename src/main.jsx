@@ -8,9 +8,9 @@ import RootLayout from './layouts/RootLayout'
 
 import Home from './pages/Home'
 import Shop from './pages/Shop'
-import Product from './Pages/Product'
-import Contact from './Pages/Contact'
-import Login from './Pages/Login'
+import Product from './pages/Product'
+import Contact from './pages/Contact'
+import Login from './pages/Login'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,7 +21,7 @@ createRoot(document.getElementById('root')).render(
 
           <Route path='/' element={ <Home /> } />
           <Route path='/shop' element={ <Shop /> } />
-          <Route path='/product/:id' element={ <Product /> } />
+          <Route path='/shop/product/:id' element={ <Product /> } />
           <Route path='/contact' element={ <Contact /> } />
           <Route path='/login' element={ <Login /> } />
 

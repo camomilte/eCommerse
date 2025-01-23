@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import Loading from '../components/Loading';
+import ErrorPage from './ErrorPage';
 
 function Product() {
     const { id } = useParams()
@@ -11,26 +12,39 @@ function Product() {
         data: null
     })
 
+    let content = null
+
     useEffect(() => {
         setProduct({
             loading: true,
-            data: null
+            data: null,
+            error: false
         })
         axios.get(url)
         .then(response => {
             setProduct({
                 loading: false, 
-                data: response.data
+                data: response.data,
+                error: false
+            })
+        })
+        .catch(() => {
+            setProduct({
+                loading: false,
+                data: null,
+                error: true
             })
         })
     }, [url])
 
+    {/* Display when product is loading */} 
     if(product.loading) {
-        return <Loading />
+        content = <Loading />
     }
 
+    {/* Display when data is returned */}
     if(product.data) {
-        return (
+        content =
             <div className="container py-5">
                 <div className="row">
                     
@@ -62,8 +76,6 @@ function Product() {
                             <span className="h4 me-2">{product.data.price} kr</span>
                         </div>
 
-                        <p className="mb-4">{product.data.description}</p>
-
                         { /* Buttons */}
                         <div className="d-grid gap-2">
                             <button className="btn btn-primary" type="button">Lägg till i varukorg</button>
@@ -71,6 +83,8 @@ function Product() {
                                     <i className="far fa-heart me-2"></i>Önskelista
                             </button>
                         </div>
+
+                        <p className="mb-5 mt-3">{product.data.description}</p>
 
                         { /* --Additional-- */}
                         <div className="mt-4">
@@ -90,11 +104,15 @@ function Product() {
                     </div>
                 </div>
             </div>
-        )
+    }
+
+    {/* Display when there is an error */}
+    if(product.error) {
+        content = <ErrorPage />
     }
 
     return (
-        <div />
+        <div>{content}</div>
 
     )
 

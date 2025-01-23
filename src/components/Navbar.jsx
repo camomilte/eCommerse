@@ -25,12 +25,12 @@ const Navigation = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto">
+            <Nav className='me-auto'>
               <Nav.Link href="/">Startsida</Nav.Link>
               <Nav.Link href="/shop">Butik</Nav.Link>
               <Nav.Link href="/contact">Kontakta oss</Nav.Link>
             </Nav>
-            <Button href="/login" className="ms-lg-2 mt-2 mt-lg-0">Log in</Button>
+            <Button href="/login">Logga in</Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

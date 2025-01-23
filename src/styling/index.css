@@ -27,3 +27,7 @@ padding: 0
     transition: ease-in 200ms;
 }
 
+.product-link {
+	text-decoration: none;
+}
+
