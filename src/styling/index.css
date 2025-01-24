@@ -1,6 +1,8 @@
 :root {
+	--clr-primary: #FF990A;
     --clr-secondary: #666666;
     --clr-text: #fff;
+	--clr-dark: #2C2C2C;
 }
 
 .footer_profile ul{
@@ -31,3 +33,21 @@ padding: 0
 	text-decoration: none;
 }
 
+.contact input, .contact textarea {
+	border: 1px solid var(--clr-secondary);
+	border-radius: 3px;
+}
+
+.contact input:focus, .contact textarea:focus {
+	border: 2px solid var(--clr-primary);
+	color: var(--clr-dark);
+	outline: 0 none;
+}
+
+.contact-icon i {
+	background: var(--clr-primary);
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	min-width: 60px;
+}

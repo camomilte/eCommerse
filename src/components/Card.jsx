@@ -3,14 +3,13 @@ import { Link } from 'react-router'
 
 function ProductCard(props) {
   return (
-    <div className='col-lg-6 col-md-12 mb-3'>
+    <div className='col-lg-12 col-md-12 mb-3'>
         <div className="card p-3">
             <div className="row">
-            <Link to={`product/${props.product._id}`}>
                 <div className="col-12 col-md-5 responsive">
                     <img src={props.product.images[0]} alt='Product' className='img-fluid rounded'></img>
                 </div>                     
-            </Link>
+            
                 <div className="col-12 col-md-7 py-3 px-4 d-flex flex-column">
                     <Link to={`product/${props.product._id}`} className='product-link text-dark'>
                         <h5 className="mb-3 mt-2">{props.product.name}</h5>

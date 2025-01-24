@@ -1,41 +1,18 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router';
 import Loading from '../components/Loading';
 import ErrorPage from './ErrorPage';
+import useAxiosGet from '../hooks/HttpRequest';
 
 function Product() {
     const { id } = useParams()
     const url = `https://js2-ecommerce-api.vercel.app/api/products/${id}`;
-    const [product, setProduct] = useState({
-        loading: false,
-        data: null
-    })
+
+
+    let product = useAxiosGet(url)    
 
     let content = null
 
-    useEffect(() => {
-        setProduct({
-            loading: true,
-            data: null,
-            error: false
-        })
-        axios.get(url)
-        .then(response => {
-            setProduct({
-                loading: false, 
-                data: response.data,
-                error: false
-            })
-        })
-        .catch(() => {
-            setProduct({
-                loading: false,
-                data: null,
-                error: true
-            })
-        })
-    }, [url])
 
     {/* Display when product is loading */} 
     if(product.loading) {
