@@ -38,6 +38,10 @@ padding: 0
 	border-radius: 3px;
 }
 
+.contact textarea {
+	height: 10rem;
+}
+
 .contact input:focus, .contact textarea:focus {
 	border: 2px solid var(--clr-primary);
 	color: var(--clr-dark);
