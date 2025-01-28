@@ -26,9 +26,23 @@ function ProductCard(props) {
                     <div className="d-flex mt-auto flex-column flex-md-row gap-2">
                         {
                             cart.some(p=>p._id===props.product._id)?(
-                                <button className="btn btn-danger">Ta bort från varukorg</button>
+                                <button 
+                                onClick={() => {
+                                    dispatch({
+                                        type: "REMOVE_FROM_CART",
+                                        payload: props.product
+                                    })
+                                }}
+                                className="btn btn-danger">Ta bort från varukorg</button>
                             ) : ( 
-                            <button className="btn btn-primary">Lägg i varukorg</button>
+                            <button 
+                                onClick={() => {
+                                    dispatch({
+                                        type: "ADD_TO_CART",
+                                        payload: props.product
+                                    })
+                            }}
+                            className="btn btn-primary">Lägg i varukorg</button>
                         )}
                         
                         <Link to={`product/${props.product._id}`}>
