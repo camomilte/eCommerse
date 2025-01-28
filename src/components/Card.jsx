@@ -1,8 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { CartState } from '../context/Context'
 
 function ProductCard(props) {
-  return (
+    const {
+        state: {cart},
+        dispatch,
+    } = CartState();
+      
+    return (
     <div className='col-lg-12 col-md-12 mb-3'>
         <div className="card p-3">
             <div className="row">
@@ -18,7 +24,13 @@ function ProductCard(props) {
                     <h5>{props.product.price} kr</h5>
                                 
                     <div className="d-flex mt-auto flex-column flex-md-row gap-2">
-                        <button className="btn btn-primary">Lägg i varukorg</button>
+                        {
+                            cart.some(p=>p._id===props.product._id)?(
+                                <button className="btn btn-danger">Ta bort från varukorg</button>
+                            ) : ( 
+                            <button className="btn btn-primary">Lägg i varukorg</button>
+                        )}
+                        
                         <Link to={`product/${props.product._id}`}>
                             <button className="btn btn-outline-secondary">Se detaljer</button>
                         </Link>

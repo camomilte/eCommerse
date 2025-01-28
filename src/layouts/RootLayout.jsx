@@ -7,9 +7,11 @@ import Footer from '../components/Footer'
 const RootLayout = () => {
   return (
     <div>
-        <Navigation />
-        <Outlet />
-        <Footer />
+        <main>
+            <Navigation />
+            <Outlet />
+            <Footer />
+        </main>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../assets/icon.svg'
+import logo from '../assets/logo-no-background.png'
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
                 src={logo}
                 height="30"
                 alt="logo"
-                className="d-inline-block"
+                className="d-inline-block me-1"
               />
               <h5 className='d-inline-block pe-4 my-auto'>The Bit Store</h5>
             </div>	

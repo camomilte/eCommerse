@@ -11,24 +11,27 @@ import Shop from './pages/Shop'
 import Product from './pages/Product'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
+import Context from './context/Context'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      
-      <Routes>
-        <Route element={ <RootLayout /> }>
+    <Context>
+      <BrowserRouter>
+        
+        <Routes>
+          <Route element={ <RootLayout /> }>
 
-          <Route path='/' element={ <Home /> } />
-          <Route path='/shop' element={ <Shop /> } />
-          <Route path='/shop/product/:id' element={ <Product /> } />
-          <Route path='/contact' element={ <Contact /> } />
-          <Route path='/login' element={ <Login /> } />
+            <Route path='/' element={ <Home /> } />
+            <Route path='/shop' element={ <Shop /> } />
+            <Route path='/shop/product/:id' element={ <Product /> } />
+            <Route path='/contact' element={ <Contact /> } />
+            <Route path='/login' element={ <Login /> } />
 
-        </Route>
+          </Route>
 
-      </Routes>
+        </Routes>
 
-    </BrowserRouter>
+      </BrowserRouter>
+    </Context>
   </StrictMode>,
 )

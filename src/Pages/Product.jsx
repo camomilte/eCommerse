@@ -48,7 +48,7 @@ function Product() {
                     {/* --Product Details-- */}
                     <div className="col-md-6">
                         <h1 className="h2 mb-3">{product.data.name}</h1>
-                        <p className='text-secondary'>{product.data.category}</p>
+                        <p className='text-secondary'>Katergori: {product.data.category}</p>
                         <div className="mb-3">
                             <span className="h4 me-2">{product.data.price} kr</span>
                         </div>
