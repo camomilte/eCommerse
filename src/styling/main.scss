@@ -3,4 +3,12 @@ $primary: #FF990A;
 $secondary: #666666;
 $dark: #2c2c2c;
 
+@include media-breakpoint-up(sm) {
+
+.dropdown-menu {
+	min-width: 70vw;
+	
+}
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

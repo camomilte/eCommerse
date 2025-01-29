@@ -12,6 +12,7 @@ import Product from './pages/Product'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Context from './context/Context'
+import Cart from './Pages/Cart'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='/shop/product/:id' element={ <Product /> } />
             <Route path='/contact' element={ <Contact /> } />
             <Route path='/login' element={ <Login /> } />
+            <Route path='/cart' element={ <Cart />} />
 
           </Route>
 
