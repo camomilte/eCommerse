@@ -77,7 +77,7 @@ padding: 0
 	  margin-bottom: 1rem;
 	}
 
-	pe-only-sm-0 {
+	.pe-only-sm-0 {
 		padding-left: 0;
 	}
 }
@@ -87,4 +87,28 @@ padding: 0
 	  max-width: 800px;
 	}
 }
+
+
+
+
+ .checkout-form {
+	border-top: 2px solid var(--clr-primary);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+ .products .item-description{
+	font-size:0.8em;
+	opacity:0.6;
+}
+
+.price{
+	float: right;
+}
+
+.checkout-form label{
+	font-size: 12px;
+	text-transform: uppercase;
+	padding-left: .3rem;
+}
+
 
