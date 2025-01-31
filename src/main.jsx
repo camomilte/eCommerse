@@ -12,10 +12,11 @@ import Product from './pages/Product'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Context from './context/Context'
-import Cart from './Pages/Cart'
-import Checkout from './Pages/Checkout'
-import ErrorPage from './Pages/ErrorPage'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import ErrorPage from './pages/ErrorPage'
 import OrderSuccess from './pages/OrderSuccess'
+import NotFound from './pages/NotFound'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -33,6 +34,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='/cart' element={ <Cart />} />
             <Route path='/checkout' element={ <Checkout /> } />
             <Route path='/errorpage' element={ <ErrorPage /> } />
+            <Route path='/notfound' element={ <NotFound /> } />
             <Route path='/ordersuccess' element={ <OrderSuccess /> } />
 
 
