@@ -14,6 +14,8 @@ import Login from './pages/Login'
 import Context from './context/Context'
 import Cart from './Pages/Cart'
 import Checkout from './Pages/Checkout'
+import ErrorPage from './Pages/ErrorPage'
+import OrderSuccess from './pages/OrderSuccess'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -30,6 +32,10 @@ createRoot(document.getElementById('root')).render(
             <Route path='/login' element={ <Login /> } />
             <Route path='/cart' element={ <Cart />} />
             <Route path='/checkout' element={ <Checkout /> } />
+            <Route path='/errorpage' element={ <ErrorPage /> } />
+            <Route path='/ordersuccess' element={ <OrderSuccess /> } />
+
+
 
           </Route>
 

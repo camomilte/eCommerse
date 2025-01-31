@@ -17,6 +17,13 @@ const Context = ({ children }) => {
     };
     
     const [state, dispatch] = useReducer(cartReducer, initialState);
+
+   /*  const [prodState, prodDispatch] = useReducer(prodReducer, {
+        category: laptop,
+        category: mobiltelefon,
+        category: dammsugare,
+        category: TV
+    }); */
     
     useEffect(() => {
         if (productsData && !loading && !error) {
