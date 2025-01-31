@@ -72,12 +72,19 @@ padding: 0
 	}
 }
 
-.style1 {
-	padding-left: 0;
+@media (max-width: 576px) {
+	.mb-only-sm {
+	  margin-bottom: 1rem;
+	}
+
+	pe-only-sm-0 {
+		padding-left: 0;
+	}
 }
 
-.style2 {
-	border-top: 1px solid rgba(0,0,0,.1); 
-	padding: 2vh 0;
+@media (min-width: 992px) {
+	.max-width-custom {
+	  max-width: 800px;
+	}
 }
 
