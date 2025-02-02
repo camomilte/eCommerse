@@ -4,11 +4,13 @@ import axios from 'axios';
 import { useNavigate } from 'react-router';
 
 const Checkout = () => {
+  // Extract the cart state and dispatch function from the CartState context
   const {
       state: { cart },
       dispatch
   } = CartState();
 
+  // Create navigate function to redirect user to other routes
   const navigate = useNavigate();
 
   const [total, setTotal] = useState();
@@ -34,12 +36,12 @@ const Checkout = () => {
   
     try {
       const response = await axios.post('https://js2-ecommerce-api.vercel.app/api/orders', orderPayload);
-      navigate('/ordersuccess');
+      navigate('/ordersuccess'); // Navigate to success page after successfull API request
       console.log('Order Response:', response.data);
     } 
     
     catch (error) {
-      navigate('/errorpage')
+      navigate('/errorpage') // Navigate to error page in case of error
       console.log(error)
     }
   };

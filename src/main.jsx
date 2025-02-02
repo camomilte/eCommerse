@@ -37,8 +37,6 @@ createRoot(document.getElementById('root')).render(
             <Route path='/notfound' element={ <NotFound /> } />
             <Route path='/ordersuccess' element={ <OrderSuccess /> } />
 
-
-
           </Route>
 
         </Routes>
