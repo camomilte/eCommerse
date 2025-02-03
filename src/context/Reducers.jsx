@@ -4,9 +4,17 @@ export const cartReducer = (state, action) => {
             return {
                 ...state,
                 products: action.payload,
-                loading: false,
-                error: null
             };
+        case 'SET_LOADING':
+            return {
+                ...state,
+                loading: action.payload
+            }
+        case 'SET_ERROR':
+            return {
+                ...state,
+                error: action.payload
+            }
         case 'ADD_TO_CART':
             return {...state, cart: [...state.cart, {...action.payload, qty: 1}] 
             };

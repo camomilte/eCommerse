@@ -7,22 +7,18 @@ import ErrorPage from './ErrorPage'
 
 
 const Shop = () => {
-    const { state, loading, error } = CartState();
-    const { products } = state || {};
+  // Extract the cart state and dispatch function from the CartState context
+  const { state } = CartState();
+  const { products, loading, error } = state || {};
 
-    if (loading) return <Loading />;
-    if (error) return <ErrorPage error={error} /> ;
-  
-    return (
-    <div>
-        <CatalogHeader />
-        {products && products.length > 0 ? (
-            <ProductsList products={products} />
-            ) : (
-            <p className="text-center py-3">No products available</p>
-      )}
+  if (loading) return <Loading />;
+  if (error) return <ErrorPage error={error} /> ;
 
-    </div>
+  return (
+  <div>
+    <CatalogHeader />
+    <ProductsList products={products} />
+  </div>
 
     
   )

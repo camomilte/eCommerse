@@ -26,20 +26,30 @@ const Context = ({ children }) => {
     }); */
     
     useEffect(() => {
-        if (productsData && !loading && !error) {
+        if (productsData) {
             dispatch({
                 type: 'SET_PRODUCTS',
                 payload: productsData,
             });
+            dispatch({
+                type: 'SET_LOADING',
+                payload: false,
+            });
         }
+    }, [productsData]);
 
+    useEffect (() => {
         if (error) {
             dispatch({
                 type: 'SET_ERROR',
                 payload: error,
             });
+            dispatch({
+                type: 'SET_LOADING',
+                payload: false,
+            });
         }
-    }, [productsData, loading, error]);
+    }, [error]);
     
     return (
         <CartContext.Provider value={{ state, dispatch }}>
